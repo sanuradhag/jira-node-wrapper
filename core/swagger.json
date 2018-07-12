@@ -1,0 +1,21 @@
+{
+  "swaggerDefinition": {
+    "info": {
+      "title": "JIRA NODE Wrapper ",
+      "version": "1.0.0",
+      "description": "Api documentation for jira-node-wrapper"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "securitySchemes": {
+      "basicAuth": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    },
+    "security": {
+      "basicAuth": []
+    }
+  },
+  "apis": ["./routes/*.js"]
+}
