@@ -4,7 +4,8 @@ import fetch from 'node-fetch';
 const JiraService = {};
 
 JiraService.createIssue = (authToken, payload, baseUrl) => {
-  const url = `${baseUrl}/${config.JIRA.issueUrl}`;
+  const url = `${baseUrl}${config.JIRA.issueUrl}`;
+  console.info('[INFO] Sending HTTP POST call to ', url);
 
   return fetch(url, {
     method: 'POST',
@@ -18,7 +19,8 @@ JiraService.createIssue = (authToken, payload, baseUrl) => {
 };
 
 JiraService.deleteIssue = (authToken, id, baseUrl) => {
-  const url = `${baseUrl}/${config.JIRA.issueUrl}/${id}`;
+  const url = `${baseUrl}${config.JIRA.issueUrl}/${id}`;
+  console.info('[INFO] Sending HTTP DELETE call to ', url);
 
   return fetch(url, {
     method: 'DELETE',

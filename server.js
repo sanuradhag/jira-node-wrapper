@@ -25,5 +25,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log('Server listing on', port)
+  console.info('[INFO] Server listing on', port)
 });
