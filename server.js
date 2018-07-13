@@ -24,7 +24,6 @@ app.get('/', (req, res) => {
   res.send('Invalid route');
 });
 
-
 app.listen(port, () => {
   console.log('Server listing on', port)
 });
