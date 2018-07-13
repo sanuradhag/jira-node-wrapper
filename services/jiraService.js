@@ -18,7 +18,7 @@ JiraService.createIssue = (authToken, payload, baseUrl) => {
 };
 
 JiraService.deleteIssue = (authToken, id, baseUrl) => {
-  const url = `${baseUrl}/${config.JIRA.issueUrl}/id`;
+  const url = `${baseUrl}/${config.JIRA.issueUrl}/${id}`;
 
   return fetch(url, {
     method: 'DELETE',

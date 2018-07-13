@@ -1,4 +1,5 @@
 import express from 'express';
+
 import jiraController from '../controllers/jira.controller';
 
 const router = express.Router();
@@ -17,45 +18,12 @@ const router = express.Router();
  *         schema:
  *           type: object
  *           required:
- *             - title
- *             - category
- *             - tags
- *             - description
- *             - images
- *             - operationArea
- *             - currency
- *             - amountPerService
- *             - city
- *             - address
- *             - phone
- *             - website
- *             - email
+ *             - payload
+ *             - jiraSpace
  *           properties:
- *             title:
- *               type: string
- *             createdBy:
- *               type: string
- *             category:
- *               type: string
- *             tags:
- *               type: string
- *             images:
- *               type: array
- *             operationArea:
- *               type: number
- *             currency:
- *               type: string
- *             amountPerService:
- *               type: string
- *             city:
- *               type: string
- *             address:
- *               type: string
- *             phone:
- *               type: string
- *             website:
- *               type: number
- *             email:
+ *             payload:
+ *               type: object
+ *             jiraSpace:
  *               type: string
  *           example: {
  *	           "payload": {
@@ -94,7 +62,39 @@ router.post('/create',
   }
 );
 
-router.delete('/delete/:id/:jiraSpace',
+
+/**
+ * @swagger
+ * /jira/delete:
+ *    post:
+ *     summary: Delete a issue in jira space.
+ *     tags:
+ *       - JIRA
+ *     parameters:
+ *       - name: body
+ *         in: body
+ *         required: true
+ *         schema:
+ *           type: object
+ *           required:
+ *             - issueID
+ *             - jiraSpace
+ *           properties:
+ *             issueID:
+ *               type: string
+ *             jiraSpace:
+ *               type: string
+ *           example: {
+ *                        "jiraSpace": "https://anuradhag.atlassian.net",
+ *                         "issueID": "SCRUM-40"
+ *                    }
+ *     responses:
+ *       400:
+ *         description: When basic authentication or jira instance is not found
+ *       500:
+ *         description: When server cannot handle the request
+ */
+router.post('/delete',
   (req, res) => {
     return jiraController.delete(req, res)
   }

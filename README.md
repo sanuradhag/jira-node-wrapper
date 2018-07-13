@@ -49,9 +49,25 @@ curl -X POST \
             "customfield_10010": "epic name"
           }
         },
-        "jiraSpace": "jiraInstance"
+        "jiraSpace": "jira instance url"
       }''
 ```
 
+
+To delete a issue
+You need to put this request through postman.
+
+```sh
+  curl -X POST \
+    http://localhost:3000/jira/delete/ \
+    -H 'authorization: Basic AuthToken' \
+    -H 'cache-control: no-cache' \
+    -H 'content-type: application/json' \
+    -H 'postman-token: 732f06db-879c-d59a-b367-f28355948d1b' \
+    -d '{
+    "jiraSpace": "jira instance url",
+    "issueID": "SCRUM-40"
+  }'
+```
 You can access the api from localhost:3000
 
