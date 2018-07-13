@@ -71,7 +71,6 @@ JiraController.delete = async (req, res) => {
 };
 
 const extractRequestData = (req, res) => {
-  console.log('extracting');
   const authHeader = req.headers.authorization;
   const authToken = authHeader.split(' ')[1];
   const jiraSpace = req.body.jiraSpace;
