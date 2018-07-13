@@ -72,7 +72,3 @@ You need to put this request through postman.
 You can access the api from [http://localhost:3000/](http://localhost:3000/)
 
 You can access the swagger api documentation from [http://localhost:3000/docs/](http://localhost:3000/docs/)
-
-## To Do
-
-* Logger integration.
