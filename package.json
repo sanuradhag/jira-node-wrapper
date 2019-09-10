@@ -1,5 +1,5 @@
 {
-  "name": "jira-node-wrapper",
+  "name": "youtube-dl-mp3",
   "version": "1.0.0",
   "description": "A simple wrapper for jira rest api using node.js",
   "main": "index.js",
@@ -11,12 +11,14 @@
   "author": "Anuradha Gunasekara",
   "license": "MIT",
   "dependencies": {
+    "@microlink/youtube-dl": "^2.0.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "node-fetch": "^2.1.2",
     "swagger-jsdoc": "^1.9.7",
-    "swagger-ui-express": "^3.0.10"
+    "swagger-ui-express": "^3.0.10",
+    "youtube-dl": "^2.0.1"
   },
   "devDependencies": {
     "babel-cli": "6.16.0",
