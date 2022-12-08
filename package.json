@@ -14,7 +14,7 @@
     "@microlink/youtube-dl": "^2.0.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "node-fetch": "^2.1.2",
     "swagger-jsdoc": "^1.9.7",
     "swagger-ui-express": "^3.0.10",
